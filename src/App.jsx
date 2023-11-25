@@ -4,44 +4,21 @@ const App = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <>
-      <div
-        style={{
-          pointerEvents: "auto",
-          position: "absolute",
-          bottom: 0,
-          right: 0,
-          width: 50,
-          height: 50,
-          backgroundColor: "red",
-          display: "flex",
-          borderRadius: "50%",
-          justifyContent: "center",
-          cursor: "pointer",
-          zIndex: 100,
-        }}
-      >
-        <div
-          style={{
-            width: 30,
-            height: 30,
-            backgroundColor: "white",
-            borderRadius: "50%",
-            alignSelf: "center",
-          }}
-          onClick={() => setOpen(!open)}
-        ></div>
-      </div>
-
+    <div
+      style={{
+        backgroundColor: "blue",
+        position: "fixed",
+        pointerEvents: "none",
+      }}
+    >
       {
         <div
           style={{
             padding: 20,
-            position: "absolute",
             bottom: 60,
             right: 60,
-            width: 400,
-            height: 600,
+            width: open ? 400 : 0,
+            height: open ? 400 : 0,
             backgroundColor: "white",
             display: "flex",
             borderRadius: "25px",
@@ -83,7 +60,32 @@ const App = () => {
           </div>
         </div>
       }
-    </>
+      <div
+        style={{
+          pointerEvents: "auto",
+          position: "relative",
+          width: 50,
+          height: 50,
+          backgroundColor: "red",
+          display: "flex",
+          borderRadius: "50%",
+          justifyContent: "center",
+          cursor: "pointer",
+          zIndex: 100,
+        }}
+      >
+        <div
+          style={{
+            width: 30,
+            height: 30,
+            backgroundColor: "white",
+            borderRadius: "50%",
+            alignSelf: "center",
+          }}
+          onClick={() => setOpen(!open)}
+        ></div>
+      </div>
+    </div>
   );
 };
 
