@@ -4,13 +4,13 @@ const App = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div>
+    <>
       <div
         style={{
           pointerEvents: "auto",
           position: "absolute",
-          bottom: 20,
-          right: 20,
+          bottom: 0,
+          right: 0,
           width: 50,
           height: 50,
           backgroundColor: "red",
@@ -40,8 +40,8 @@ const App = () => {
             position: "absolute",
             bottom: 60,
             right: 60,
-            width: open ? 400 : 0,
-            height: open ? 600 : 0,
+            width: 400,
+            height: 600,
             backgroundColor: "white",
             display: "flex",
             borderRadius: "25px",
@@ -83,7 +83,7 @@ const App = () => {
           </div>
         </div>
       }
-    </div>
+    </>
   );
 };
 

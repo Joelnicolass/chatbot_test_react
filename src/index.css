@@ -13,6 +13,4 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  pointer-events: none;
-  overflow: hidden;
 }
