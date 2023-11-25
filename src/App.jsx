@@ -18,6 +18,7 @@ const App = () => {
           justifyContent: "center",
           cursor: "pointer",
           zIndex: 100,
+          pointerEvents: "all",
         }}
       >
         <div
